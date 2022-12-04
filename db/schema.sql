@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS ultimate_blog;
-CREATE DATABASE ultimate_blog;
+DROP DATABASE IF EXISTS user_db;
+CREATE DATABASE user_db;
