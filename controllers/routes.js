@@ -26,7 +26,7 @@ router.get("/blog/:id", async (req, res) => {
 //router.get("/dashboard", async (req, res) => {}
 
 router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.log) {
     res.redirect("/");
     return;
   }
