@@ -1,2 +1,43 @@
-<div class="blog1title">Title:</div>
-<div class="blog1">Hello</div>
+<div class="blog-container">
+  <div class="card-header col-md-12 text-center">
+  </div>
+  {{#each users as |user|}}
+  <div class="blog col-md-4">
+    <p>
+      {{user.id}}.
+      {{user.username}}
+      
+    </p>
+  </div>
+  {{/each}}
+  
+  <div class="add-blog">
+    <h2>
+     Add a new Blog
+    </h2>
+    <form class="new-blog-form">
+      <label for="blog_title">
+        Blog Name:
+      </label>
+      <br />
+      <textarea id="blog_title" name="bog_title" rows="2" cols="30">
+      {{blog_title}}
+    </textarea>
+      <br />
+      <label for="description">
+        Description:
+      </label>
+      <br />
+      <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+      <br />
+     
+      <button type="submit" value="Submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="/public/js/add-blog.js"></script>
