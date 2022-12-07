@@ -23,7 +23,7 @@ router.get("/blog/:id", async (req, res) => {
   }
 });
 
-//router.get("/dashboard", async (req, res) => {}
+router.get("/dashboard", async (req, res) => {})
 
 router.get("/login", (req, res) => {
   if (req.session.log) {
