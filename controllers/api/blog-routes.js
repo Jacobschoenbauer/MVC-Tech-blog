@@ -1,5 +1,21 @@
 const router = require("express").Router();
 const Blog = require("../../models/blog");
+const User = require("../../models/user")
+router.get('/', async (req, res) => {
+  try { 
+    const commentData = await Comment.findAll({
+      include: [
+          {
+              model: User,
+              attributes: ["name", "id"]
+          },
+      ],
+    });
+    res.status(200).json(commentData)
+  } catch(err) {
+    res.status(500).json(err)
+  }
+});
 
 router.post("/", async (req, res) => {
   try {
